@@ -19,3 +19,11 @@ const getUser = callback => {
   };
   callback(user);
 };
+
+getUser(function(user){
+  coinToss(user.guess, function(didWin){
+    const message = didWin?"You won!":"You lost :(";
+    console.log(message);
+  })
+
+})
